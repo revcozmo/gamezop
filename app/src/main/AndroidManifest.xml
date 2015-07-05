@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rishabhsethi.whoop2" >
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.rishabhsethi.whoop2.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.rishabhsethi.whoop2.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.rishabhsethi.whoop2.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/gamezoplogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon" >
+        <meta-data android:name="LOCALYTICS_APP_KEY"
+            android:value="3279b5d7597263da33ac194-ae1fd55c-197f-11e5-43d4-006918dcf667"/>
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.rishabhsethi.whoop2.Contacts, com.rishabhsethi.whoop2.DBFavorites" />
+        <activity
+            android:name=".MainActivity"
+            android:background="#3f51b5"
+            android:label="gamezop"
+            android:textColor="#ffffff" >
+        </activity>
+        <activity
+            android:name=".CrossActivity"
+            android:label="gamezop" >
+
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="gamezop"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.codepath.android.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GcmMessageHandler" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

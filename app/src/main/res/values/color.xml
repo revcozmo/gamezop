@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ColorPrimary">#e62117</color>
+    <color name="ColorPrimaryDark">#c31c13</color>
+    <color name="tabsScrollColor">#9fa8da</color>
+    <color name="appbarbackgroundcolor">#3f51b5</color>
+    <color name="appbartitlecolor">#ffffff</color>
+
+</resources>

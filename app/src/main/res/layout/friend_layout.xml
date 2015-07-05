@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/friend">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/friendImage"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/userpic"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/friendName"
+            android:layout_marginLeft="16dp"/>
+
+        <Button
+            android:id="@+id/invite"
+            android:text="Invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:visibility="invisible"
+            android:textSize="12dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/friendExpandable"
+        android:background="#000000"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/gameOne"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25" />
+
+        <ImageView
+            android:id="@+id/gameTwo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"/>
+
+        <ImageView
+            android:id="@+id/gameThree"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"/>
+
+        <ImageView
+            android:id="@+id/gameFour"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"/>
+
+    </LinearLayout>
+</LinearLayout>

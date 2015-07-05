@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/game_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#eeeeee"
+        android:layout_marginTop="8dp"
+        android:paddingRight="16dp"
+        card_view:cardCornerRadius="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/game_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:color="#30000000"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"/>
+
+            <ImageView
+                android:id="@+id/game_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layoutDirection="rtl"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp" />
+
+            <TextView
+                android:id="@+id/game_name"
+                android:layout_width="wrap_content"
+                android:color="#90000000"
+                android:layout_height="130dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="48dp"
+                android:textSize="@dimen/abc_text_size_headline_material" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                xmlns:fancy="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/TVshare"
+                fancy:textColor="#ffc107"
+                fancy:defaultColor="#ffffff"
+                fancy:focusColor="#fff9c4"
+                fancy:radius="3dp"
+                fancy:text="SHARE"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:layout_alignParentBottom="true"
+                />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                xmlns:fancy="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/TVfavorite"
+                fancy:textColor="#ffc107"
+                fancy:defaultColor="#ffffff"
+                fancy:focusColor="#fff9c4"
+                fancy:radius="3dp"
+                fancy:text="FAVORITE"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/TVshare"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" />
+
+            <ImageView
+                android:id="@+id/IVmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="right"
+                android:clickable="true"
+                android:src="@drawable/ic_expand_xxhdpi"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
