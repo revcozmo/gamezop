@@ -17,13 +17,13 @@ driver = webdriver.Firefox()
 #f = open('ale_fo.txt','w')
 #driver = webdriver.PhantomJS("./phantomjs/bin/phantomjs.exe", service_args=service_args)
 for i in range(0,len(usernames)):
-    bakchod = usernames[i]
-    if not os.path.isfile(bakchod[:-1]+".txt"):
-        #print bakchod[:-1]
+    gamezop = usernames[i]
+    if not os.path.isfile(gamezop[:-1]+".txt"):
+        #print gamezop[:-1]
         #print "-"*50
         driver.quit()
         sleep(10)
-        text_file = open(bakchod[:-1]+".txt","w")
+        text_file = open(gamezop[:-1]+".txt","w")
         #driver = webdriver.PhantomJS("./phantomjs/bin/phantomjs.exe", service_args=service_args)
         driver = webdriver.Firefox()
         driver.maximize_window()
@@ -45,13 +45,13 @@ for i in range(0,len(usernames)):
         body = driver.find_element_by_tag_name("body")
         body.send_keys(Keys.CONTROL + 't')
         try:
-            driver.get("https://twitter.com/"+bakchod[:-1]+"/following")
+            driver.get("https://twitter.com/"+gamezop[:-1]+"/following")
             count = 0
             startTime = strftime("%H:%M:%S")
             st = time.time()
             while count < 1000:
                 count += 1
-                elem = driver.find_element_by_class_name('ProfileNameTruncated')                    
+                elem = driver.find_element_by_class_name('ProfileNameTruncated')
                 if count == 1:
                     sleep(5)
                 elem.send_keys(Keys.PAGE_DOWN)
@@ -65,8 +65,8 @@ for i in range(0,len(usernames)):
             endTime = strftime("%H:%M:%S")
             et = time.time()
             t = et-st
-            print bakchod[:-1],"-"*10,startTime,"-"*10,endTime
-            print bakchod[:-1],"-"*30,t
+            print gamezop[:-1],"-"*10,startTime,"-"*10,endTime
+            print gamezop[:-1],"-"*30,t
             TIME += t/60
             print "TIME =",TIME
             print "-"*70
@@ -80,4 +80,4 @@ for i in range(0,len(usernames)):
             print "-"*20,"PASS","-"*20
             pass
     else:
-        print "-"*30+bakchod[:-1]+"-"*30
+        print "-"*30+gamezop[:-1]+"-"*30
