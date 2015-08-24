@@ -9,13 +9,8 @@ with open('usernames.txt') as f:
     usernames = f.readlines()
 print usernames
 TIME = 0
-service_args = [
-    '--proxy=proxy62.iitd.ernet.in:3128',
-    '--proxy-auth=bb5130028:FUCKTHEWORLD2555'
-    ]
 driver = webdriver.Firefox()
 #f = open('ale_fo.txt','w')
-#driver = webdriver.PhantomJS("./phantomjs/bin/phantomjs.exe", service_args=service_args)
 for i in range(0,len(usernames)):
     gamezop = usernames[i]
     if not os.path.isfile(gamezop[:-1]+".txt"):
@@ -24,7 +19,6 @@ for i in range(0,len(usernames)):
         driver.quit()
         sleep(10)
         text_file = open(gamezop[:-1]+".txt","w")
-        #driver = webdriver.PhantomJS("./phantomjs/bin/phantomjs.exe", service_args=service_args)
         driver = webdriver.Firefox()
         driver.maximize_window()
         #driver.get("https://twitter.com/alexia/following")
