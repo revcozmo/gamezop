@@ -48,7 +48,9 @@ for i in range(0,len(usernames)):
                 elem = driver.find_element_by_class_name('ProfileNameTruncated')
                 if count == 1:
                     sleep(5)
-                elem.send_keys(Keys.PAGE_DOWN)
+                #elem.send_keys(Keys.PAGE_DOWN)
+                body = driver.find_element_by_tag_name("body")
+                body.send_keys(Keys.PAGE_DOWN)
                 if count%10 == 0:
                     sleep(0.1)
             Listlink = driver.find_elements_by_xpath('//div[@class="ProfileCard-content"]//div[@class="ProfileCard-userFields"]//div[@class="ProfileNameTruncated"]//div[@class="u-textTruncate u-inlineBlock"]//a[@href]')
